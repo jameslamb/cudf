@@ -202,6 +202,7 @@ files:
       table: project.optional-dependencies
       key: test
     includes:
+      - cuda_version
       - test_python_common
       - test_python_cudf_common
       - test_python_cudf
@@ -348,6 +349,7 @@ files:
       table: project.optional-dependencies
       key: test
     includes:
+      - cuda_version
       - depends_on_dask_cuda
       - numpy_run
       - test_python_common
@@ -386,6 +388,7 @@ files:
       table: project.optional-dependencies
       key: test
     includes:
+      - cuda_version
       - depends_on_dask_cuda
       - test_python_common
       - test_python_cudf_common
@@ -584,6 +587,34 @@ dependencies:
               cuda: "13.1"
             packages:
               - cuda-version=13.1
+          - matrix:
+            packages:
+      - output_types: requirements
+        matrices:
+          - matrix:
+              cuda: "12.2"
+            packages:
+              - cuda-toolkit==12.2.*
+          - matrix:
+              cuda: "12.5"
+            packages:
+              - cuda-toolkit==12.5.*
+          - matrix:
+              cuda: "12.8"
+            packages:
+              - cuda-toolkit==12.8.*
+          - matrix:
+              cuda: "12.9"
+            packages:
+              - cuda-toolkit==12.9.*
+          - matrix:
+              cuda: "13.0"
+            packages:
+              - cuda-toolkit==13.0.*
+          - matrix:
+              cuda: "13.1"
+            packages:
+              - cuda-toolkit==13.1.*
   cuda:
     common:
       - output_types: [conda]
@@ -597,14 +628,27 @@ dependencies:
     specific:
       - output_types: [requirements, pyproject]
         matrices:
+          # We always want nvJitLink >= whatever version cuDF was built against.
+          # nvJitLink tends to follow the CTK's minor versions, but check at https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html
           - matrix:
               cuda: "12.*"
             packages:
               - nvidia-nvjitlink-cu12>=12.9
-          # fallback to CUDA 13 versions if 'cuda' is '13.*' or not provided
+          - matrix:
+              cuda: "13.0"
+            packages:
+              - &nvjitlink_cu13 nvidia-nvjitlink>=13.0,<14
+          - matrix:
+              cuda: "13.1"
+            packages:
+              - nvidia-nvjitlink>=13.1,<14
+          - matrix:
+              cuda: "13.*"
+            packages:
+              - *nvjitlink_cu13
           - matrix:
             packages:
-              - nvidia-nvjitlink>=13.0
+              - *nvjitlink_cu13
   develop:
     common:
       - output_types: [conda, requirements]

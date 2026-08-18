@@ -6,7 +6,7 @@ cuDF pandas accelerator mode (``cudf.pandas``) is built on cuDF and
 Pandas API**, using the GPU for supported operations, and
 automatically **falling back to pandas** for other operations.
 
-.. code-block:: python
+.. code-block:: ipython
 
    %load_ext cudf.pandas
    # pandas API is now GPU accelerated

@@ -1,6 +1,7 @@
 ================
 Extension Dtypes
 ================
+
 .. currentmodule:: cudf.core.dtypes
 
 cuDF supports a number of extension dtypes that build on top of the types that pandas supports. These dtypes are not directly available in pandas, which instead relies on object dtype arrays that run at Python rather than native speeds. The following dtypes are supported:
@@ -8,14 +9,14 @@ cuDF supports a number of extension dtypes that build on top of the types that p
 
 cudf.CategoricalDtype
 =====================
+
 .. autosummary::
    :toctree: api/
 
    CategoricalDtype
 
+.. rubric:: Properties and Methods
 
-Properties and Methods
-----------------------
 .. autosummary::
    :toctree: api/
 
@@ -37,13 +38,14 @@ Properties and Methods
 
 cudf.Decimal32Dtype
 ===================
+
 .. autosummary::
    :toctree: api/
 
    Decimal32Dtype
 
-Properties and Methods
-----------------------
+.. rubric:: Properties and Methods
+
 .. autosummary::
    :toctree: api/
 
@@ -65,13 +67,14 @@ Properties and Methods
 
 cudf.Decimal64Dtype
 ===================
+
 .. autosummary::
    :toctree: api/
 
    Decimal64Dtype
 
-Properties and Methods
-----------------------
+.. rubric:: Properties and Methods
+
 .. autosummary::
    :toctree: api/
 
@@ -93,13 +96,14 @@ Properties and Methods
 
 cudf.Decimal128Dtype
 ====================
+
 .. autosummary::
    :toctree: api/
 
    Decimal128Dtype
 
-Properties and Methods
-----------------------
+.. rubric:: Properties and Methods
+
 .. autosummary::
    :toctree: api/
 
@@ -121,13 +125,14 @@ Properties and Methods
 
 cudf.ListDtype
 ==============
+
 .. autosummary::
    :toctree: api/
 
    ListDtype
 
-Properties and Methods
-----------------------
+.. rubric:: Properties and Methods
+
 .. autosummary::
    :toctree: api/
 
@@ -146,13 +151,14 @@ Properties and Methods
 
 cudf.StructDtype
 ================
+
 .. autosummary::
    :toctree: api/
 
    StructDtype
 
-Properties and Methods
-----------------------
+.. rubric:: Properties and Methods
+
 .. autosummary::
    :toctree: api/
 
@@ -171,13 +177,14 @@ Properties and Methods
 
 cudf.IntervalDtype
 ==================
+
 .. autosummary::
    :toctree: api/
 
    IntervalDtype
 
-Properties and Methods
-----------------------
+.. rubric:: Properties and Methods
+
 .. autosummary::
    :toctree: api/
 

@@ -17,7 +17,7 @@ metadata:
 ## Compatibility
 
 - Release tracked by this skill: 26.04.
-- Requires NVIDIA Volta or newer on CUDA 12, or Turing or newer on CUDA 13. Release 26.04 supports CUDA 12.2-12.9 with driver 535+ or CUDA 13.0-13.1 with driver 580+, and Python 3.11-3.14. cuDF sweet spot: >100K rows.
+- Requires NVIDIA Volta or newer on CUDA 12, or Turing or newer on CUDA 13. Release 26.04 supports CUDA 12.2-12.9 with driver 535+ or CUDA 13.0-13.1 with driver 580+, and Python 3.12-3.14. cuDF sweet spot: >100K rows.
 
 ## Naming
 

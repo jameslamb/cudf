@@ -150,7 +150,7 @@ def make_snapshot(
 P = ParamSpec("P")
 
 
-def log_do_evaluate(
+def log_do_evaluate[**P](
     func: Callable[Concatenate[type[ir.IR], P], cudf_polars.containers.DataFrame],
 ) -> Callable[Concatenate[type[ir.IR], P], cudf_polars.containers.DataFrame]:
     """

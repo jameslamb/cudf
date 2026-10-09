@@ -32,7 +32,6 @@ from typing import (
     Any,
     ClassVar,
     ParamSpec,
-    TypeAlias,
     TypeVar,
     assert_never,
     overload,
@@ -2772,7 +2771,7 @@ def _strip_predicate_casts(node: expr.Expr) -> expr.Expr:
     return node.reconstruct([_strip_predicate_casts(child) for child in node.children])
 
 
-_ColumnKey: TypeAlias = tuple[plc_expr.TableReference, str]
+type _ColumnKey = tuple[plc_expr.TableReference, str]
 
 
 def _colref_comparisons(

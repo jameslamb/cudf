@@ -10,7 +10,7 @@ import enum
 import functools
 import os
 import time
-from typing import TYPE_CHECKING, Any, Concatenate, Literal, ParamSpec
+from typing import TYPE_CHECKING, Any, Concatenate, Literal
 
 import nvtx
 import pynvml
@@ -145,9 +145,6 @@ def make_snapshot(
         d.update(extra)
 
     return d
-
-
-P = ParamSpec("P")
 
 
 def log_do_evaluate[**P](

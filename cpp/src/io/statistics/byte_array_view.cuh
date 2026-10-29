@@ -32,8 +32,7 @@ class byte_array_view {
     : _data(data, size)
   {
   }
-  CUDF_HOST_DEVICE constexpr byte_array_view(byte_array_view const&) noexcept =
-    default;  ///< Copy constructor
+  constexpr byte_array_view(byte_array_view const&) noexcept = default;  ///< Copy constructor
   /**
    * @brief Copy assignment operator.
    *

@@ -83,6 +83,7 @@ cpp/examples/*/install/
 cpp/examples/*/build/
 cpp/include/cudf/ipc_generated/*.h
 cpp/thirdparty/googletest/
+devcontainer-lock.json
 
 ## Eclipse IDE
 .project

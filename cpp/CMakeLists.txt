@@ -1461,9 +1461,9 @@ endif()
 # libnvcomp_static.a is built with GCC 14 and references C++ runtime symbols that libstdc++ < 14
 # doesn't provide. Bundle private definitions of them into libcudf whenever static nvcomp is linked
 # in. The source file only defines them when building against libstdc++ < 14.
-if(_absorbed_nvcomp OR CUDF_nvcomp_TARGET STREQUAL "nvcomp::nvcomp_static")
-  target_sources(cudf PRIVATE src/utilities/libstdcxx_compat.cpp)
-endif()
+# if(_absorbed_nvcomp OR CUDF_nvcomp_TARGET STREQUAL "nvcomp::nvcomp_static")
+#  target_sources(cudf PRIVATE src/utilities/libstdcxx_compat.cpp)
+# endif()
 
 # Add Conda library, and include paths if specified
 if(TARGET conda_env)
